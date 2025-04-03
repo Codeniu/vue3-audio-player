@@ -64,6 +64,11 @@
 
 <script setup>
 import { ref, nextTick } from 'vue'
+
+// 测试生产包
+// import { Vue3AudioPlayer } from '../../dist/vue3-audio-player.es.js'
+// import '../../dist/vue3-audio-player.css'
+
 import Vue3AudioPlayer from '../../src/index.vue'
 // import Vue3AudioPlayer from '../../src/Vue3AudioPlayer.vue'
 

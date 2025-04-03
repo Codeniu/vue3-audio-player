@@ -142,8 +142,6 @@ const {
   onDurationchange
 } = useAudioPlayer(props, emit)
 
-console.log('===>', props)
-
 // 提供共享状态给子组件
 provide('audioPlayer', {
   audio,
