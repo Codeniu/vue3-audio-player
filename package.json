@@ -1,0 +1,53 @@
+{
+  "name": "@codeniu/vue3-audio-player",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Vue 3 audio player component",
+  "main": "dist/vue3-audio-player.umd.js",
+  "module": "dist/vue3-audio-player.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "cross-env BUILD_MODE=dev vite",
+    "build": "vue-tsc --emitDeclarationOnly && vite build",
+    "build:docs": "cross-env BUILD_MODE=dev vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "vue3",
+    "audio",
+    "player",
+    "vue-audio",
+    "vue-music",
+    "audio-player",
+    "component",
+    "vue3-audio-player",
+    "音频",
+    "音乐",
+    "播放器",
+    "codeniu",
+    "mp3"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-vue": "^10.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.4",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
+  }
+}
