@@ -17,7 +17,8 @@ export default defineConfig({
   build: isDocsMode
     ? {
         outDir: 'dist',
-        emptyOutDir: true
+        emptyOutDir: true,
+        assetsDir: 'vue3-audio-player'
       }
     : {
         lib: {
