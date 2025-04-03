@@ -65,6 +65,7 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 import Vue3AudioPlayer from '../../src/index.vue'
+// import Vue3AudioPlayer from '../../src/Vue3AudioPlayer.vue'
 
 const audioPlayer = ref(null)
 const currentAudioName = ref('')
@@ -89,7 +90,10 @@ const audioList = [
   }
 ]
 
+console.log(audioPlayer.value)
+
 const handleBeforePlay = next => {
+  console.log('before play', audioPlayer.value)
   currentAudioName.value = audioList[audioPlayer.value.currentPlayIndex].title
   next()
 }
@@ -97,6 +101,8 @@ const handleBeforePlay = next => {
 const handlePlaySpecify = () => {
   audioPlayer.value.currentPlayIndex = 1
   nextTick(() => {
+    console.log(audioPlayer.value)
+
     audioPlayer.value.play()
     currentAudioName.value = audioList[audioPlayer.value.currentPlayIndex].title
   })

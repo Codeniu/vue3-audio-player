@@ -1,6 +1,6 @@
 {
   "name": "@codeniu/vue3-audio-player",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "A Vue 3 audio player component",
   "main": "dist/vue3-audio-player.umd.js",
@@ -32,7 +32,8 @@
     "codeniu",
     "mp3"
   ],
-  "author": "",
+  "author": "https://github.com/Codeniu",
+  "repository": "https://github.com/Codeniu/vue3-audio-player",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.14.0",
