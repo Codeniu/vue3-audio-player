@@ -2,27 +2,28 @@
 
 Vue3 Audio Player 是一个基于 Vue3 的音频播放器组件，提供了丰富的功能和自定义选项。
 
+![](https://codeniu-picbed.oss-cn-hangzhou.aliyuncs.com/picbed/Snipaste_2025-04-03_11-05-22.jpg)
+
 ## 安装
 使用 npm 安装 Vue3 Audio Player：
 ```bash
-npm install vue3-audio-player
+npm install @codeniu/vue3-audio-player
 ```
 ## 引入
 在你的 Vue 项目中引入 Vue3 Audio Player：
 ```js
-import Vue3AudioPlayer from 'vue3-audio-player'
-import 'vue3-audio-player/dist/style.css'
-app.use(Vue3AudioPlayer)
+import { Vue3AudioPlayer } from '@codeniu/vue3-audio-player'
+import '@codeniu/vue3-audio-player/dist/vue3-audio-player.css'
 ```
 ## 使用
+
+
 在你的组件中使用 Vue3 Audio Player：
 
 ```vue
 <template>
   <vue3-audio-player
     :audioList="audioList"
-    :isLoop="true"
-    :isAutoPlayNext="true"
     themeColor="#EC4141"
     @play="handlePlay"
     @pause="handlePause"

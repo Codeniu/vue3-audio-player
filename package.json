@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "cross-env BUILD_MODE=dev vite",
-    "build": "vue-tsc --emitDeclarationOnly && vite build",
+    "build": "vite build",
     "build:docs": "cross-env BUILD_MODE=dev vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",

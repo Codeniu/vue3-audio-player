@@ -4,6 +4,22 @@
   </div>
 
   <div class="audio-container">
+    <h3>基础使用</h3>
+
+    <code class="code-block">
+      <pre>
+        &lt;vue3-audio-player
+            ref="audioPlayer"
+            :audio-list="audioList"
+            :before-play="handleBeforePlay"
+            :show-play-loading="true"
+            :showVolumeButton="false"
+            @ended="handleEnded"
+            themeColor="#0c4c7d"
+        /&gt;
+      </pre>
+    </code>
+
     <div class="name">
       {{ currentAudioName || audioList[0].title }}
     </div>
@@ -22,15 +38,25 @@
   </div>
 
   <div class="audio-container">
-    <h3>自定义样式</h3>
-    <TlAudioPlayer
+    <h3>内置样式</h3>
+    <p>设置 mode="tl",以应用第二种样式</p>
+    <code class="code-block">
+      <pre>
+        &lt;vue3-audio-player
+          mode="tl"
+        /&gt;
+      </pre>
+    </code>
+    <vue3-audio-player
+      mode="tl"
       ref="audioPlayer"
       :audio-list="audioList"
       :before-play="handleBeforePlay"
       :show-play-loading="true"
       @ended="handleEnded"
+      themeColor="#357abd"
     >
-    </TlAudioPlayer>
+    </vue3-audio-player>
 
     <button @click="handlePlaySpecify">Play the second audio</button>
   </div>
@@ -39,7 +65,6 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 import Vue3AudioPlayer from '../../src/index.vue'
-import TlAudioPlayer from '../../src/TlAudioPlayer.vue'
 
 const audioPlayer = ref(null)
 const currentAudioName = ref('')
@@ -113,5 +138,38 @@ button {
 
 button:hover {
   background-color: #357abd;
+}
+
+.code-block {
+  display: block;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 16px 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #495057;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-block pre::before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow:
+    20px 0 0 #ffbd2e,
+    40px 0 0 #27c93f;
+  margin-bottom: 16px;
 }
 </style>
