@@ -7,6 +7,7 @@ const isDocsMode = process.env.BUILD_MODE === 'dev'
 
 export default defineConfig({
   plugins: [vue()],
+  base: isDocsMode ? '/vue3-audio-player/' : './',
   root: isDocsMode ? 'examples' : '.',
   // 开发服务器配置
   server: {
@@ -17,8 +18,7 @@ export default defineConfig({
   build: isDocsMode
     ? {
         outDir: 'dist',
-        emptyOutDir: true,
-        assetsDir: 'vue3-audio-player'
+        emptyOutDir: true
       }
     : {
         lib: {
